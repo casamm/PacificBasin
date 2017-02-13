@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.0" />
+    <PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CirculationPro">
+      <HintPath>..\Libs\CirculationPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Pipes">
+      <HintPath>..\Libs\Pipes.dll</HintPath>
+    </Reference>
+    <Reference Include="PureMVC">
+      <HintPath>..\Libs\PureMVC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

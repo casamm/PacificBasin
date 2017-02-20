@@ -11,7 +11,7 @@ namespace CirculationPro
     {
         public async Task<Customer[]> GetCustomersAsync(string address = "", string city = "", string state = "", string zip = "", string firstname = "", string lastname = "", string company = "", string telephone = "", string email = "", string maxrecords = "", string circName = "", string circPass = "")
         {
-            using (var client = new HttpClient())
+            using (var client = new HttpClient(new HttpClientHandler { UseProxy = false }))
             {
                 var body = $@"
                 <soapenv:Envelope xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:def=""http://DefaultNamespace"">
